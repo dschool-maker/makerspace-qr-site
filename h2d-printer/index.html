@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bambu Lab H2D — Makerspace Guides</title>
+<meta name="description" content="Quickstart, software links and safety notes for the Bambu Lab H2D 3D printer.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand-lockup">
+      <span class="eyebrow">Hasso Plattner</span>
+      <span class="wordmark"><span class="d-school">d-school</span><span class="afrika">AFRIKA</span></span>
+    </a>
+    <nav class="site-nav"><a href="../index.html#machines">All machines</a></nav>
+  </div>
+</header>
+
+<div class="machine-hero" style="background:var(--red);">
+  <div class="shape-field" aria-hidden="true">
+    <div class="shape circle" style="width:200px;height:200px;background:rgba(255,255,255,.12);top:-80px;right:-60px;"></div>
+    <div class="shape quarter-tl" style="width:90px;height:90px;background:var(--yellow);bottom:-10px;left:8%;"></div>
+  </div>
+  <div class="wrap">
+    <a class="back-link" href="../index.html">← All machines</a>
+    <p class="kicker">3D Printing</p>
+    <h1>Bambu Lab H2D</h1>
+    <p>A multi-material FDM 3D printer that can also mount a laser/cutting toolhead. If it's your first time here, start with plain FDM printing before touching the laser module.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="block">
+    <h2><span class="dash"></span>Idea → finished product</h2>
+    <ol class="steps">
+      <li><span class="num">1</span><p><strong>Find or design a model.</strong> Browse Bambu's MakerWorld for a ready-made design, or design your own in free CAD software (Tinkercad for beginners, Fusion 360 for more control). Export as an STL.</p></li>
+      <li><span class="num">2</span><p><strong>Slice it.</strong> Open Bambu Studio, import the STL, choose your filament and the H2D printer profile, and slice. Bambu Studio shows you the print time and material use before you commit.</p></li>
+      <li><span class="num">3</span><p><strong>Send &amp; print.</strong> Send the sliced file to the printer over the network (or export to a USB drive). Watch the first layer — that's when most problems show up.</p></li>
+      <li><span class="num">4</span><p><strong>Finish.</strong> Remove supports, sand rough edges, and it's done. For multi-color or multi-material jobs, load your extra filaments into the AMS before slicing.</p></li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2><span class="dash teal"></span>Quickstart</h2>
+    <ul class="steps teal">
+      <li><span class="num">1</span><p>Power on the printer and let it finish its startup checks.</p></li>
+      <li><span class="num">2</span><p>Load your filament into the AMS (or directly, if not using AMS) and let the printer detect it.</p></li>
+      <li><span class="num">3</span><p>On your laptop, open <strong>Bambu Studio</strong>, connect to this printer, and import your sliced or downloaded model.</p></li>
+      <li><span class="num">4</span><p>Hit slice, double check the preview, then send the print.</p></li>
+      <li><span class="num">5</span><p>Stay for the first layer. Once it's laying down cleanly, you're free to walk away — but check back periodically.</p></li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2><span class="dash navy"></span>Software &amp; manuals</h2>
+    <div class="link-grid">
+      <a class="link-card" href="https://bambulab.com/en-us/support/documentation/961610223821189120" target="_blank" rel="noopener">
+        <span class="tag">Official docs</span><h4>H2D Documentation</h4><p>Quick start guides, user manual, laser safety document.</p>
+      </a>
+      <a class="link-card" href="https://wiki.bambulab.com/en/h2/manual/h2d-intro" target="_blank" rel="noopener">
+        <span class="tag">Wiki</span><h4>Bambu Lab Wiki — H2D</h4><p>Component breakdowns, laser/cutting module guides, troubleshooting.</p>
+      </a>
+      <a class="link-card" href="https://bambulab.com/en/download" target="_blank" rel="noopener">
+        <span class="tag">Download</span><h4>Bambu Studio</h4><p>Slicer software — free download for Mac/Windows/Linux.</p>
+      </a>
+      <a class="link-card" href="https://bambulab.com/en/makerworld" target="_blank" rel="noopener">
+        <span class="tag">Models</span><h4>MakerWorld</h4><p>Free, ready-to-print models if you don't want to design your own.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="safety">
+      <h2 style="margin-bottom:14px;">⚠ Safety &amp; who to ask</h2>
+      <ul>
+        <li>Never touch the nozzle or heated bed while printing or right after — both run well above 100°C.</li>
+        <li>Keep hands clear of the toolhead and AMS while they're moving.</li>
+        <li>If you're switching to the laser/cutting module, read the H2D Laser Safety Document first and get a staff sign-off — different rules apply (ventilation, eyewear, no unattended laser jobs).</li>
+        <li>Don't leave the first layer of a print unattended — that's when failures happen.</li>
+        <li>Report any unusual smells, sounds, or filament jams to staff rather than troubleshooting live prints yourself.</li>
+      </ul>
+      <p class="ask">Not sure about something? Ask a makerspace staff member on shift before you press print.</p>
+    </div>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>d-school Afrika Makerspace — reframe, rethink, resolve.<br>
+    Not sure which machine you need, or something broken? Ask a makerspace staff member on shift.</p>
+  </div>
+</footer>
+
+</body>
+</html>
