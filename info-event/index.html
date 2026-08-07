@@ -334,26 +334,26 @@ section.block h2 { font-family:var(--font-display); font-size:24px; margin:0 0 2
     });
   });
 
-  var plainBody =
-    "Hey!\n\n" +
-    "Find out how you can use the d-school makerspace for free — laser cutting, 3D printing and more. Register for your free beverage.\n\n" +
-    "Tuesday, 11th August, 4pm - at dschool building, lower level\n\n" +
-    "RSVP here: " + EVENT_URL + "\n\n" +
-    "See you there!";
-
+var plainBody =
+    "Hey!\n" +
+    "The Makerspace Info event is happening this Tuesday, 11th August, 4pm - at dschool building, lower level.\n" +
+    "Find out how you can use the d-school makerspace for free — laser cutting, 3D printing and more. Register for your free beverage.\n" +
+    "[RSVP here](" + EVENT_URL + ")\n" +
+    "See you there!\n" +
+    "The Maker\n" +
+    "https://rebrand.ly/make7";
   document.getElementById('shareMailto').href =
     "mailto:?subject=" + encodeURIComponent(SHARE_SUBJECT) +
     "&body=" + encodeURIComponent(plainBody);
-
   document.getElementById('copyInvite').addEventListener('click', function(e){
     e.preventDefault();
-
     var htmlBody =
       '<p>Hey!</p>' +
+      '<p>The Makerspace Info event is happening this Tuesday, 11th August, 4pm - at dschool building, lower level.</p>' +
       '<p>Find out how you can use the <strong>d-school makerspace for free</strong> — laser cutting, 3D printing and more. Register for your free beverage.</p>' +
-      '<p>Tuesday, 11th August, 4pm - at dschool building, lower level</p>' +
       '<p><a href="' + EVENT_URL + '">RSVP here</a></p>' +
-      '<p>See you there!</p>';
+      '<p>See you there!</p>' +
+      '<p>The Maker<br><a href="https://rebrand.ly/make7">https://rebrand.ly/make7</a></p>';
 
     var copiedMsg = document.getElementById('copiedMsg');
 
