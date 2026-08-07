@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Makerspace Info Evening — RSVP</title>
+<meta property="og:title" content="Makerspace Info Evening — d-school Afrika">
+<meta property="og:description" content="Find out how you can use the d-school makerspace for free. Laser cutting, 3D printing and more. Register for your free beverage.">
+<style>
+:root {
+  --red: #d13327;
+  --teal: #00949c;
+  --yellow: #f5ab33;
+  --navy: #070b51;
+  --paper: #faf9f6;
+  --ink: #1a1a2e;
+  --ink-soft: #4a4a5c;
+  --line: rgba(7, 11, 81, 0.12);
+  --radius: 14px;
+  --font-display: "Avenir Next", Avenir, "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --shadow: 0 10px 30px rgba(7, 11, 81, 0.08);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body); line-height:1.6; -webkit-font-smoothing:antialiased; }
+a { color: var(--red); }
+img, svg { max-width:100%; display:block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+.site-header { padding: 22px 0; border-bottom: 1px solid var(--line); background: #fff; }
+.site-header .wrap { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand-lockup { display:flex; flex-direction:column; line-height:1; text-decoration:none; }
+.brand-lockup .eyebrow { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:4px; }
+.brand-lockup .wordmark { display:flex; align-items:baseline; gap:8px; font-family:var(--font-display); }
+.brand-lockup .wordmark .d-school { font-weight:800; color:var(--red); text-decoration:underline; text-decoration-color:var(--red); text-decoration-thickness:3px; text-underline-offset:6px; font-size:22px; }
+.brand-lockup .wordmark .afrika { font-weight:500; color:var(--teal); letter-spacing:.06em; font-size:20px; }
+.site-nav { display:flex; gap:20px; flex-wrap:wrap; }
+.site-nav a { color:var(--ink); text-decoration:none; font-weight:600; font-size:14.5px; }
+.site-nav a:hover { color:var(--red); }
+
+.dash { display:inline-block; width:34px; height:4px; border-radius:2px; background:var(--red); margin-right:10px; vertical-align:middle; flex-shrink:0; }
+.dash.teal{background:var(--teal);} .dash.yellow{background:var(--yellow);} .dash.navy{background:var(--navy);}
+.eyebrow-dash { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:14px; }
+
+.hero { padding:56px 0 40px; position:relative; overflow:hidden; }
+.hero .wrap { position:relative; z-index:2; }
+.hero h1 { font-family:var(--font-display); font-size:clamp(32px,4.6vw,48px); line-height:1.08; margin:0 0 16px; max-width:20ch; }
+.hero h1 .accent { color:var(--red); }
+.hero p.lede { font-size:18px; color:var(--ink-soft); max-width:60ch; margin:0 0 20px; }
+.shape-field { position:absolute; inset:0; z-index:1; pointer-events:none; opacity:.9; }
+.shape { position:absolute; } .shape.circle{border-radius:50%;} .shape.quarter-br{border-radius:0 0 100% 0;} .shape.half-bottom{border-radius:0 0 100% 100%;}
+.event-meta { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px; }
+.meta-pill { display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:14px; font-weight:700; color:var(--navy); box-shadow:var(--shadow); }
+.meta-pill .dot { width:8px; height:8px; border-radius:50%; background:var(--red); }
+
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; font-weight:700; font-size:15px; padding:13px 22px; border-radius:999px; text-decoration:none; border:none; cursor:pointer; font-family:var(--font-body); }
+.btn-primary { background:var(--red); color:#fff; }
+.btn-primary:hover { background:#b32a20; }
+.btn-secondary { background:#fff; color:var(--navy); border:1.5px solid var(--line); }
+.btn-secondary:hover { border-color: var(--navy); }
+.btn-block { width:100%; }
+.btn:disabled { opacity:.55; cursor:not-allowed; }
+
+section.block { padding:0 0 60px; }
+section.block h2 { font-family:var(--font-display); font-size:24px; margin:0 0 22px; display:flex; align-items:center; }
+
+.event-card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:32px 30px; max-width:560px; }
+
+.field { margin-top:20px; }
+.field:first-child { margin-top:0; }
+.field label { display:block; font-family:var(--font-display); font-weight:700; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink); margin-bottom:8px; }
+.field input[type="text"], .field input[type="email"], .field input[type="tel"] {
+  width:100%; padding:12px 14px; border:1.5px solid var(--line); border-radius:10px;
+  font-size:15px; font-family:var(--font-body); background:#fff; color:var(--ink);
+}
+.field input:focus { outline:none; border-color:var(--red); }
+.field .hint { font-size:12.5px; color:var(--ink-soft); margin-top:5px; }
+.field .error { display:none; font-size:12.5px; font-weight:700; color:var(--red); margin-top:6px; }
+.field.invalid input { border-color:var(--red); }
+.field.invalid .error { display:block; }
+
+.radio-group { display:flex; flex-direction:column; gap:10px; }
+.radio-option {
+  display:flex; align-items:flex-start; gap:10px;
+  border:1.5px solid var(--line); border-radius:10px; padding:12px 14px;
+  cursor:pointer; background:#fff;
+}
+.radio-option input { margin-top:3px; accent-color:var(--red); }
+.radio-option span { font-size:14.5px; line-height:1.35; color:var(--ink); }
+.radio-option.selected { border-color:var(--red); background:#fff6f5; }
+
+.form-error-banner {
+  display:none; background:#fff6ea; border-left:6px solid var(--yellow); border-radius:var(--radius);
+  color:var(--navy); padding:12px 16px; font-size:13.5px; font-weight:700; margin-top:18px;
+}
+
+.dashline { height:2px; background:repeating-linear-gradient(to right, var(--line) 0 8px, transparent 8px 14px); margin:26px 0; }
+
+#thankyou { display:none; text-align:center; }
+#thankyou .check {
+  width:56px; height:56px; border-radius:50%; background:var(--teal); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:800; margin:0 auto 18px;
+}
+#thankyou h2 { font-family:var(--font-display); font-weight:800; font-size:24px; margin:0 0 10px; justify-content:center; }
+#thankyou p { font-size:15px; color:var(--ink-soft); line-height:1.55; margin:0 auto 24px; max-width:400px; }
+.share-actions { display:flex; flex-direction:column; gap:10px; }
+.copied-msg { display:none; font-size:12.5px; font-weight:700; color:var(--teal); margin-top:8px; }
+
+.site-footer { padding:34px 0 60px; text-align:center; color:var(--ink-soft); font-size:13.5px; }
+.site-footer a { color: var(--ink-soft); }
+
+@media (max-width:640px){ .site-header .wrap{ flex-direction:column; align-items:flex-start; } .event-card{ padding:26px 22px; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand-lockup">
+      <span class="eyebrow">Hasso Plattner</span>
+      <span class="wordmark"><span class="d-school">d-school</span><span class="afrika">AFRIKA</span></span>
+    </a>
+    <nav class="site-nav">
+      <a href="../#how-it-works">How it works</a>
+      <a href="../#values">Values</a>
+      <a href="../#join">Join</a>
+      <a href="../#booking">Book a machine</a>
+      <a href="../#machines">Machine guides</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="shape-field" aria-hidden="true">
+    <div class="shape half-bottom" style="width:200px;height:100px;background:var(--yellow);top:-10px;right:10%;opacity:.85;"></div>
+    <div class="shape circle" style="width:60px;height:60px;border:10px solid var(--teal);top:110px;right:22%;"></div>
+    <div class="shape quarter-br" style="width:140px;height:140px;background:var(--red);bottom:-30px;right:-30px;opacity:.9;"></div>
+  </div>
+  <div class="wrap">
+    <p class="eyebrow-dash"><span class="dash"></span>Info Evening</p>
+    <h1>Makerspace Info <span class="accent">Evening</span></h1>
+    <p class="lede">Find out how you can use the d-school makerspace for free — laser cutting, 3D printing and more. Register for your free beverage.</p>
+    <div class="event-meta">
+      <span class="meta-pill"><span class="dot"></span>Tuesday 11 August</span>
+      <span class="meta-pill"><span class="dot"></span>4:00pm</span>
+      <span class="meta-pill"><span class="dot"></span>d-school Afrika building, UCT</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="block">
+
+    <div class="event-card">
+      <h2><span class="dash teal"></span>RSVP</h2>
+
+      <form id="rsvpForm" novalidate>
+
+        <div class="field" id="field-name">
+          <label for="name">Name</label>
+          <input type="text" id="name" autocomplete="name">
+          <div class="error">Please enter your name.</div>
+        </div>
+
+        <div class="field" id="field-whatsapp">
+          <label for="whatsapp">WhatsApp Number</label>
+          <input type="tel" id="whatsapp" placeholder="082 123 4567" autocomplete="tel">
+          <div class="hint">South African mobile number, e.g. 082 123 4567 or +27821234567</div>
+          <div class="error">Please enter a valid South African mobile number.</div>
+        </div>
+
+        <div class="field" id="field-email">
+          <label for="email">Email</label>
+          <input type="email" id="email" autocomplete="email">
+          <div class="error">Please enter a valid email address.</div>
+        </div>
+
+        <div class="field" id="field-catering">
+          <label>Refreshments</label>
+          <div class="radio-group" id="cateringOptions">
+            <label class="radio-option">
+              <input type="radio" name="catering" value="Yes please provide refreshments for me">
+              <span>Yes please provide refreshments for me</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="catering" value="Yes please provide refreshments for me and one friend">
+              <span>Yes please provide refreshments for me and one friend</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="catering" value="No thank you">
+              <span>No thank you</span>
+            </label>
+          </div>
+          <div class="error">Please choose one option.</div>
+        </div>
+
+        <div class="form-error-banner" id="formErrorBanner">Please fix the highlighted fields above.</div>
+
+        <div class="dashline"></div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">RSVP for the Info Evening</button>
+      </form>
+
+      <div id="thankyou">
+        <div class="check">&#10003;</div>
+        <h2>You're on the list!</h2>
+        <p>See you on Tuesday 4pm, d-school Afrika building, Middle Campus.</p>
+
+        <div class="share-actions">
+          <a class="btn btn-primary btn-block" id="shareMailto" href="#">Share with friend (email client will open with link)</a>
+          <a class="btn btn-secondary btn-block" id="copyInvite" href="#">Click to copy the invite (you will need to paste in the email)</a>
+        </div>
+        <div class="copied-msg" id="copiedMsg">Copied! Paste into a Gmail or Outlook compose window.</div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>d-school Afrika Makerspace — reframe, rethink, resolve.<br>
+    Not sure about something? Ask a makerspace staff member on shift, or come along to an open day.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+
+  // ============================================================
+  // These 4 values are already wired up to a live Google Form —
+  // do not change them.
+  // ============================================================
+  var GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLScPhmUyS2goksleYvIvi2fK94SNH0tlEO6rcMIkcQFrCd6ESQ/formResponse";
+  var ENTRY_NAME     = "entry.366624222";
+  var ENTRY_WHATSAPP = "entry.1633140876";
+  var ENTRY_EMAIL    = "entry.1162585421";
+  var ENTRY_CATERING = "entry.1133644782";
+  // ============================================================
+
+  var EVENT_URL = "https://dschool-maker.github.io/makerspace-qr-site/info-event/";
+  var SHARE_SUBJECT = "register for the d-school makerspace information event - free";
+
+  var form = document.getElementById('rsvpForm');
+  var nameInput = document.getElementById('name');
+  var whatsappInput = document.getElementById('whatsapp');
+  var emailInput = document.getElementById('email');
+  var cateringOptions = document.getElementById('cateringOptions');
+  var formErrorBanner = document.getElementById('formErrorBanner');
+  var submitBtn = document.getElementById('submitBtn');
+
+  var SA_MOBILE_RE = /^(\+27|0)[ -]?[6-8][ -]?[0-9][ -]?[0-9]{3}[ -]?[0-9]{4}$/;
+
+  cateringOptions.querySelectorAll('.radio-option').forEach(function(opt){
+    opt.addEventListener('click', function(){
+      cateringOptions.querySelectorAll('.radio-option').forEach(function(o){o.classList.remove('selected');});
+      opt.classList.add('selected');
+    });
+  });
+
+  function setInvalid(fieldId, invalid){
+    document.getElementById(fieldId).classList.toggle('invalid', invalid);
+  }
+
+  function validate(){
+    var valid = true;
+
+    if(!nameInput.value.trim()){ setInvalid('field-name', true); valid = false; }
+    else setInvalid('field-name', false);
+
+    if(!SA_MOBILE_RE.test(whatsappInput.value.trim())){ setInvalid('field-whatsapp', true); valid = false; }
+    else setInvalid('field-whatsapp', false);
+
+    var emailVal = emailInput.value.trim();
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
+    if(!emailOk){ setInvalid('field-email', true); valid = false; }
+    else setInvalid('field-email', false);
+
+    var cateringChecked = form.querySelector('input[name="catering"]:checked');
+    if(!cateringChecked){ setInvalid('field-catering', true); valid = false; }
+    else setInvalid('field-catering', false);
+
+    formErrorBanner.style.display = valid ? 'none' : 'block';
+    return valid;
+  }
+
+  function submitToGoogleForm(data){
+    var iframe = document.createElement('iframe');
+    iframe.name = 'hidden_rsvp_iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    var hiddenForm = document.createElement('form');
+    hiddenForm.action = GOOGLE_FORM_ACTION;
+    hiddenForm.method = 'POST';
+    hiddenForm.target = 'hidden_rsvp_iframe';
+
+    function addField(name, value){
+      var input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = name;
+      input.value = value;
+      hiddenForm.appendChild(input);
+    }
+    addField(ENTRY_NAME, data.name);
+    addField(ENTRY_WHATSAPP, data.whatsapp);
+    addField(ENTRY_EMAIL, data.email);
+    addField(ENTRY_CATERING, data.catering);
+
+    document.body.appendChild(hiddenForm);
+    hiddenForm.submit();
+
+    setTimeout(showThankYou, 500);
+  }
+
+  function showThankYou(){
+    form.style.display = 'none';
+    document.getElementById('thankyou').style.display = 'block';
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!validate()) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting…';
+
+    submitToGoogleForm({
+      name: nameInput.value.trim(),
+      whatsapp: whatsappInput.value.trim(),
+      email: emailInput.value.trim(),
+      catering: form.querySelector('input[name="catering"]:checked').value
+    });
+  });
+
+  var plainBody =
+    "Hey!\n\n" +
+    "Find out how you can use the d-school makerspace for free — laser cutting, 3D printing and more. Register for your free beverage.\n\n" +
+    "Tuesday, 11th August, 4pm - at dschool building, lower level\n\n" +
+    "RSVP here: " + EVENT_URL + "\n\n" +
+    "See you there!";
+
+  document.getElementById('shareMailto').href =
+    "mailto:?subject=" + encodeURIComponent(SHARE_SUBJECT) +
+    "&body=" + encodeURIComponent(plainBody);
+
+  document.getElementById('copyInvite').addEventListener('click', function(e){
+    e.preventDefault();
+
+    var htmlBody =
+      '<p>Hey!</p>' +
+      '<p>Find out how you can use the <strong>d-school makerspace for free</strong> — laser cutting, 3D printing and more. Register for your free beverage.</p>' +
+      '<p>Tuesday, 11th August, 4pm - at dschool building, lower level</p>' +
+      '<p><a href="' + EVENT_URL + '">RSVP here</a></p>' +
+      '<p>See you there!</p>';
+
+    var copiedMsg = document.getElementById('copiedMsg');
+
+    if(navigator.clipboard && window.ClipboardItem){
+      var item = new ClipboardItem({
+        'text/html': new Blob([htmlBody], {type: 'text/html'}),
+        'text/plain': new Blob([plainBody], {type: 'text/plain'})
+      });
+      navigator.clipboard.write([item]).then(function(){
+        copiedMsg.style.display = 'block';
+      }).catch(function(){
+        navigator.clipboard.writeText(plainBody);
+        copiedMsg.style.display = 'block';
+      });
+    } else {
+      navigator.clipboard.writeText(plainBody);
+      copiedMsg.style.display = 'block';
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>
